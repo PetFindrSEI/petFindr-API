@@ -45,8 +45,6 @@ INSTALLED_APPS = [
     'users',
     'corsheaders',
     'djoser',
-
-
 ]
 
 MIDDLEWARE = [
@@ -164,19 +162,42 @@ DJOSER = {
     }
 }
 
-# # For file storage with AWS
-# # Media configuration
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-# MEDIA_URL = '/media/'
+# For file storage with AWS
+# Media configuration
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
 
-# # S3 Configuration
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# AWS_STORAGE_BUCKET_NAME = 'landon-drf-restaurants'
+# S3 Configuration
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_STORAGE_BUCKET_NAME = 'petfindr'
 
-# AWS_DEFAULT_ACL = 'public-read'
+AWS_DEFAULT_ACL = 'public-read'
 
-# AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-# AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
-# AWS_QUERYSTRING_AUTH = False
+AWS_QUERYSTRING_AUTH = False
+
+# arn: -> arn:aws:iam::077925244344:user/petfindr-upload
+
+# {
+#   "Id": "Policy1644695249585",
+#   "Version": "2012-10-17",
+#   "Statement": [
+#     {
+#       "Sid": "Stmt1644695235244",
+#       "Action": [
+#         "s3:PutObject",
+#         "s3:PutObjectAcl"
+#       ],
+#       "Effect": "Allow",
+#       "Resource": "arn:aws:s3:::petfindr/*",
+#       "Principal": {
+#         "AWS": [
+#           "arn:aws:iam::077925244344:user/petfindr-upload"
+#         ]
+#       }
+#     }
+#   ]
+# }

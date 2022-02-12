@@ -40,7 +40,10 @@ class Pet(models.Model):
     location = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
     reported_time = models.DateTimeField()
+
     owner = models.ForeignKey('users.User', related_name='pets', on_delete=models.CASCADE)
+
+    photo = models.ImageField(upload_to='images/', default='images/default.jpg')
 
     def __str__(self):
         return f'{self.name} - {self.status} - {self.type}'
