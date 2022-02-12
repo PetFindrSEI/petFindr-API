@@ -45,5 +45,7 @@ class Pet(models.Model):
 
     photo = models.ImageField(upload_to='images/', default='images/default.jpg')
 
+    phone_number = models.IntegerField(max_length=14)
+
     def __str__(self):
         return f'{self.name} - {self.status} - {self.type}'

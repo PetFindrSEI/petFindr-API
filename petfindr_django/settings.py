@@ -179,25 +179,3 @@ AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
 AWS_QUERYSTRING_AUTH = False
 
-# arn: -> arn:aws:iam::077925244344:user/petfindr-upload
-
-# {
-#   "Id": "Policy1644695249585",
-#   "Version": "2012-10-17",
-#   "Statement": [
-#     {
-#       "Sid": "Stmt1644695235244",
-#       "Action": [
-#         "s3:PutObject",
-#         "s3:PutObjectAcl"
-#       ],
-#       "Effect": "Allow",
-#       "Resource": "arn:aws:s3:::petfindr/*",
-#       "Principal": {
-#         "AWS": [
-#           "arn:aws:iam::077925244344:user/petfindr-upload"
-#         ]
-#       }
-#     }
-#   ]
-# }
