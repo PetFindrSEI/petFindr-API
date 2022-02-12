@@ -1,4 +1,5 @@
 from django.db import models
+from phone_field import PhoneField
 
 # Create your models here.
 class Pet(models.Model):
@@ -45,7 +46,7 @@ class Pet(models.Model):
 
     photo = models.ImageField(upload_to='images/', default='images/default.jpg')
 
-    phone_number = models.IntegerField(max_length=14)
+    phone_number = PhoneField(blank=True, help_text='Contact Phone Number')
 
     def __str__(self):
         return f'{self.name} - {self.status} - {self.type}'
