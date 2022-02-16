@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 # Create your models here.
 # Custom user inherits from parent class, AbstractUser
 class User(AbstractUser):
