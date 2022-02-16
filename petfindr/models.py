@@ -44,7 +44,7 @@ class Pet(models.Model):
 
     owner = models.ForeignKey('users.User', related_name='pets', on_delete=models.CASCADE)
 
-    photo = models.ImageField(upload_to='images/', default='images/default.jpg')
+    photo = models.ImageField(upload_to='images/', default='images/default.png')
 
     phone_number = PhoneField(blank=True, help_text='Contact Phone Number')
 
