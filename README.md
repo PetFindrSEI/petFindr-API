@@ -60,6 +60,19 @@ Pet Model:
     }
 ```
 
+## Django REST Framework
+
+From inside the Django REST framework, you can perform all CRUD operations on any pet that is connected with your account. You can also alter your user info from the `users/me/` endpoint. 
+
+## Endpoints
+
+- Default: https://petfindr-api.herokuapp.com/
+- View All Pets: https://petfindr-api.herokuapp.com/pets/
+- View Specific Pet (By ID): https://petfindr-api.herokuapp.com/pets/37
+- View Current User: https://petfindr-api.herokuapp.com/users/me/
+
+
+
 ## Major Hurdles / Unsolved Problems
 
 ### Unsolved Problems
